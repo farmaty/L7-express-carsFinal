@@ -1,0 +1,15 @@
+<div class="container">
+    <p style="font-size:70px">add car</p>
+    {{#if info}}
+        <div class="alert alert-success">{{info}}</div>
+    {{/if}}
+    <div class="tysm">
+        <form class="d-flex flex-column" action="/add" method="GET">
+            <label><input type="checkbox" name="ubezpieczony">Ubezpieczony</label>
+            <label><input type="checkbox" name="benzyna">Benzyna</label>
+            <label><input type="checkbox" name="uszkodzony">Uszkodzony</label>
+            <label><input type="checkbox" name="naped4x4">Napęd 4x4</label>
+            <button class="btn btn-dark" style="width:fit-content">Add</button>
+        </form>
+    </div>
+</div>

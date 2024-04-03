@@ -1,0 +1,31 @@
+<div class="container">
+    <p style="font-size:70px">list car page</p>
+    <form action="/deleteAll" metod="GET">
+        <Button type="button" class="btn" style="background-color:red;color:white"
+            onclick="if(confirm('Delete all cars? ')==true){this.form.submit()}">DELETE ALL CARS</Button>
+    </form>
+    <table class="table">
+        <tr>
+            <th scope="call">ID</th>
+            <th scope="call">ubezpieczony</th>
+            <th scope="call">benzyna</th>
+            <th scope="call">uszkodzony</th>
+            <th scope="call">naped4x4</th>
+        </tr>
+        {{#each context}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{ubezpieczony}}</td>
+            <td>{{benzyna}}</td>
+            <td>{{uszkodzony}}</td>
+            <td>{{naped4x4}}</td>
+            <td>
+                <form action="/deletePojedynczyRekord" method="get">
+                    <input type="hidden" value="{{_id}}" name="bungus">
+                    <button type="submit" class="btn" style="background-color:red;color:white">DELETE</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

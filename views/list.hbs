@@ -1,0 +1,24 @@
+<div class="container">
+    <p style="font-size:70px">list car page</p>
+    <table class="table">
+        <tr>
+            <th scope="call">ID</th>
+            <th scope="call">ubezpieczony</th>
+            <th scope="call">benzyna</th>
+            <th scope="call">uszkodzony</th>
+            <th scope="call">naped4x4</th>
+        </tr>
+        {{#each context}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{ubezpieczony}}</td>
+            <td>{{benzyna}}</td>
+            <td>{{uszkodzony}}</td>
+            <td>{{naped4x4}}</td>
+            <td><Button type="button" class="btn btn-dark"
+                    onclick="alert('id: {{_id}}\nubezpieczony: {{ubezpieczony}}\nbenzyna: {{benzyna}}\nuszkodzony: {{uszkodzony}}\nnaped4x4: {{naped4x4}}')">INFO</Button>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
